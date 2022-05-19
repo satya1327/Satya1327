@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar bg-primary shadow-sm" style="background-color: blue;">
+        <div class="navbar-brand align-center d-flex" (click)="clk()">
+         <i class="fa fa-shopping-cart " style="font-size:30px">&nbsp;</i>
+                <strong style="font-size: 30px;color: rgb(255, 255, 0);" >Flipkart</strong>
+                <div class="form-group">
+
+                    <input type="text" class="form-control ;" placeholder="search product">
+
+                </div>
+
+        </div>
+        <span class="fa fa-search search-item"></span>
+        <button style="margin-left:47%;margin-top: 0.5%;background-color: blue;" class="byn btn-primary"  (click)="navi()">
+            <i style="font-size: 30px;" class="fa fa-cart-plus"></i>
+            <div  class="badge bg-danger" style="font-size:8px;color: white;background-color: red;" >{{totalItem}}</div>
+        </button>
+        <span><button class="btn btn-danger" style="margin-top: -17px;margin-left:42px" (click)="logout()">logout</button></span>
+
+    </div>
+</header>

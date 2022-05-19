@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+    <!-- <div class="container d-flex">
+        <span class="item">
+            <a href="">
+                <img style="margin-left: -150px;"
+                    src="https://media.istockphoto.com/vectors/shopping-cart-vector-id510010569?k=20&m=510010569&s=612x612&w=0&h=2Q7Is0MyBgm6HGijeSWwcsWlY8ReyvEk-tRAKrWWDZE="
+                    alt="no immage">
+            </a>
+        </span>
+        <span class="item">
+            <a href=""><img src="https://ecommerce.ccc2020.fr/wp-content/uploads/2020/10/electronic-gadgets.jpeg"
+                    alt=""></a>
+        </span>
+        <span class="item">
+            <a href=""><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIFtUXr4N1CBhitZhijBi867xUSIYJcDBn6g&usqp=CAU"
+                    alt=""></a>
+        </span>
+
+        <span class="item">
+            <a href=""><img style="height: 50px; width:64px"
+                    src="https://m.media-amazon.com/images/I/81vg24zfx0L._UY575_.jpg" alt="">
+
+                </a>
+
+        </span>
+        <div class=" container d-flex" style="    margin-left: -87px;">
+            <a  style="margin-left:-66px;text-decoration: none;"  class="word" routerLink="products"><span>all product</span></a>
+            <a  style="margin-left:25px;text-decoration: none;"  class="word" ><span>electronics</span></a>
+            <a   style="margin-left:40px;text-decoration: none;"  class="word"><span >fashion</span></a>
+            <a  style="margin-left:32px;text-decoration: none;"  class="word"><span >jwellery</span></a>
+        </div>
+    </div> -->
+
+<div class="container">
+    <div class="row">
+        <ng-container>
+        <div class="card col-md-3" *ngFor="let item of productList">
+            <img src="{{item.image}}" alt="">
+            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+            <p><strong>price:</strong>${{item.price}}</p>
+            <button class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+        </div>
+    </ng-container>
+    </div>
+</div>
